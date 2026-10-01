@@ -73,7 +73,7 @@ export default function App() {
         <div className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex items-center gap-3">
           <Brain className="w-5 h-5 text-violet-400" />
           <div>
-            <h1 className="text-white font-semibold">Knowledge Base Q&A</h1>
+            <h1 className="text-white font-semibold">DocuMind</h1>
             <p className="text-gray-500 text-xs">
               Ask anything — answers are grounded in your documents
             </p>
@@ -88,7 +88,7 @@ export default function App() {
               <p className="text-gray-400 font-medium mb-2">
                 {documents.length === 0
                   ? "Upload documents to get started"
-                  : "Your knowledge base is ready"}
+                  : "Your DocuMind is ready"}
               </p>
               <p className="text-gray-600 text-sm mb-8">
                 {documents.length === 0

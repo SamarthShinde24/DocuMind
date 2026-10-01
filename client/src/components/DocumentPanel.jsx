@@ -38,7 +38,7 @@ export default function DocumentPanel({ documents, onRefresh }) {
       <div className="p-4 border-b border-gray-800">
         <div className="flex items-center gap-2 mb-3">
           <FileText className="w-5 h-5 text-violet-400" />
-          <h2 className="font-semibold text-white">Knowledge Base</h2>
+          <h2 className="font-semibold text-white">DocuMind</h2>
         </div>
         <button
           onClick={() => inputRef.current?.click()}
