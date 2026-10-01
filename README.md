@@ -1,4 +1,4 @@
-# Personal Knowledge Base (RAG)
+# DocuMind (RAG)
 
 A NotebookLM-lite clone — upload your PDFs and text files, ask questions, get answers cited from your own documents. Built with a real RAG pipeline, not just prompt-wrapping.
 
