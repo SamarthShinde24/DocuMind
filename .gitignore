@@ -1,0 +1,12 @@
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.env
+chroma_db/
+backend/uploads/
+chroma_db/
+.chroma/
+*.egg-info/
+dist/
+
