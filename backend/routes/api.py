@@ -2,6 +2,7 @@ from fastapi import APIRouter, UploadFile, File, HTTPException
 from pydantic import BaseModel
 from services.ingest import ingest_document, list_documents, delete_document
 from services.query import query_knowledge_base
+from services.summarize import summarize_document
 
 router = APIRouter()
 
@@ -47,3 +48,14 @@ def query(req: QueryRequest):
         return result
     except Exception as e:
         raise HTTPException(500, f"Query failed: {str(e)}")
+    
+class SummarizeRequest(BaseModel):
+    filename: str
+
+@router.post("/summarize")
+def summarize(req: SummarizeRequest):
+    try:
+        result = summarize_document(req.filename)
+        return result
+    except Exception as e:
+        raise HTTPException(500, f"Summary failed: {str(e)}")

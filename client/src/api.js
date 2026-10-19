@@ -9,6 +9,17 @@ export async function uploadDocument(file) {
   return data;
 }
 
+export async function summarizeDocument(filename) {
+  const res = await fetch(`${BASE}/summarize`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ filename }),
+  });
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.detail || "Summary failed.");
+  return data;
+}
+
 export async function getDocuments() {
   const res = await fetch(`${BASE}/documents`);
   const data = await res.json();
